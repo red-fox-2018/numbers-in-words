@@ -122,4 +122,4 @@ function toWords(num) {
   }
 }
 
-console.log(toWords(1230000000543));
+console.log(toWords(107230076000543));
