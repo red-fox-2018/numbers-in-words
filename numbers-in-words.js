@@ -38,7 +38,6 @@ function in_word(num) {
   
   for  (let i in obj2) {
     if(num >= obj2[i]) {
-      // console.log(obj2[i])
       let sisa = Math.floor(num / obj2[i]);
       if (sisa === 1) {
         return "se" + i + " " + in_word(num%obj2[i])
@@ -50,7 +49,7 @@ function in_word(num) {
     }
   }
 }
-// console.log(in_word(4));
+console.log(in_word(4));
 // empat
 console.log(in_word(27));
 // dua puluh tujuh
