@@ -31,9 +31,9 @@ function numberInWords(num) {
     return result.trim();
 }
 
-console.log(numberInWords(705));
-console.log(numberInWords(2011845));
-console.log(numberInWords(2211845));
-console.log(numberInWords(2222111845));
-console.log(numberInWords(222333211845));
-console.log(numberInWords(222333444555666));
+console.log(numberInWords(4)); // empat
+console.log(numberInWords(27)); // dua puluh tujuh
+console.log(numberInWords(102)); // seratus dua
+console.log(numberInWords(38079)); // tiga puluh delapan ribu tujuh puluh sembilan
+console.log(numberInWords(82102713)); // delapan puluh dua juta seratus dua ribu tujuh ratus tiga belas
+console.log(numberInWords(999000000000000));  // sembilan ratus sembilan puluh sembilan trilyun
