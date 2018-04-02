@@ -42,7 +42,7 @@ function in_words(nilai){
                 return in_words(hasilbagi) +" "+ x +" "+ in_words(nilai-nilaiAsli)
             }
             else if(Math.floor(nilai/tingkat[x])==1){
-                return "Se" + x
+                return "Se" + x +" "+in_words(nilai-nilaiAsli)
             }
             else{
                 return Object.keys(kata)[String(nilai)[0]] +" "+ x + " "+in_words(nilai-nilaiAsli)
