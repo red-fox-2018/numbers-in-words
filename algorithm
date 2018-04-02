@@ -1,0 +1,170 @@
+- buat sebuah function "in_woords" dengan parameter "num" yang akan menerima angka
+
+  * buat sebuah array of object "low_number" yang berisi angka 1 sampai 10 beserta string angka tersebut
+
+  * buat kondisi :
+
+  => jika "num" sama dengan angka "000"
+
+     # return nilai string kosong
+
+  => jika "num" lebih kecil dari 10, maka :
+
+     # lakukan perulangan dengan variable "i" sama dengan 0 sebanyak jumlah "low_number"
+
+      * jika num sama dengan angka low_number index ke "i", maka:
+
+        => return words dari "low_number" index ke "i"
+
+  => jika "num" lebih kecil dari 20 dan "num" lebih besar dari 10, maka:
+
+     # jika num sama dengan 11, maka return string "sebelas"
+
+     # jika tidak, lakukan perulangan dengan variable "i" sama dengan 0 sebanyak jumlah "low_number"
+
+        * jika "num" index ke 1 sama dengan angka dari "low_number" index ke "i",
+
+          maka, return words "low_number" index ke "i" ditambah string "belas"
+
+  => jika panjang "num" sama dengan 2, maka:
+
+    # lakukan perulangan dengan variable "i" sama dengan 0 sebanyak jumlah "low_number"
+
+      * jika string "num" index ke 0 sama dengan angka "low_number" index ke "i", maka:
+
+        => return words dari "low_number" index ke "i" dan string "puluh" dan panggil kembali function in_words dengan parameter string num yang di slice mulai dari index ke 1
+
+  => jika panjang string "num" sama dengan 3, maka:
+
+    # jika "num" sama dengan 100, maka return string "seratus"
+
+  => jika tidak, # lakukan perulangan dengan variable "i" sama dengan 0 sebanyak jumlah "low_number"
+
+    # jika "num" index ke 0 sama dengan angka "low_number" index ke "i", maka:
+
+      * jika "num" index ke 0 sama dengan 1, maka return string "seratus " dan panggil kembali function in_words dengan parameter string num yang di slice mulai dari index ke 1
+
+      * jika tidak maka return words "low_number" index ke "i" dan string "ratus " dan panggil kembali function in_words dengan parameter string num yang di slice mulai dari index ke 1
+
+  => jika panjang string "num" sama dengan 4, maka:
+
+    # jika "num" sama dengan 1000, maka return string "seribu"
+
+  => jika tidak, # lakukan perulangan dengan variable "i" sama dengan 0 sebanyak jumlah "low_number"
+
+    # jika "num" index ke 0 sama dengan angka "low_number" index ke "i", maka:
+
+      * jika "num" index ke 0 sama dengan 1, maka return string "seribu " dan panggil kembali function in_words dengan parameter string num yang di slice mulai dari index ke 1
+
+      * jika tidak maka return words "low_number" index ke "i" dan string "ribu " dan panggil kembali function in_words dengan parameter string num yang di slice mulai dari index ke 1
+
+  => jika panjang string "num" sama dengan 5, maka:
+
+    # lakukan perulangan dengan variable "i" sama dengan 0 sebanyak jumlah "low_number"
+
+    # jika "num" index ke 0 sama dengan angka "low_number" index ke "i", maka:
+
+      * return function in_words dengan parameter "num" yang di slice mulai dari index ke 0 sebanyak 2 digit dan
+
+        string "ribu" dan function in_words dengan parameter string "num" yang di slice mulai dari index ke 2
+
+  => jika panjang string "num" sama dengan 6, maka:
+
+    # lakukan perulangan dengan variable "i" sama dengan 0 sebanyak jumlah "low_number"
+
+    # jika "num" index ke 0 sama dengan angka "low_number" index ke "i", maka:
+
+      * return function in_words dengan parameter "num" yang di slice mulai dari index ke 0 sebanyak 3 digit dan
+
+        string "ribu" dan function in_words dengan parameter string "num" yang di slice mulai dari index ke 3
+
+  => jika panjang string "num" sama dengan 7, maka:
+
+    # lakukan perulangan dengan variable "i" sama dengan 0 sebanyak jumlah "low_number"
+
+    # jika "num" index ke 0 sama dengan angka "low_number" index ke "i", maka:
+
+      * return function in_words dengan parameter "num" index ke 0 dan
+
+        string "juta" dan function in_words dengan parameter string "num" yang di slice mulai dari index ke 1
+
+
+  => jika panjang string "num" sama dengan 8, maka:
+
+    # lakukan perulangan dengan variable "i" sama dengan 0 sebanyak jumlah "low_number"
+
+    # jika "num" index ke 0 sama dengan angka "low_number" index ke "i", maka:
+
+      * return function in_words dengan parameter "num" yang di slice mulai dari index ke 0 sebanyak 2 digit dan
+
+        string "juta" dan function in_words dengan parameter string "num" yang di slice mulai dari index ke 2
+
+  => jika panjang string "num" sama dengan 9, maka:
+
+    # lakukan perulangan dengan variable "i" sama dengan 0 sebanyak jumlah "low_number"
+
+    # jika "num" index ke 0 sama dengan angka "low_number" index ke "i", maka:
+
+      * return function in_words dengan parameter "num" yang di slice mulai dari index ke 0 sebanyak 3 digit dan
+
+        string "juta" dan function in_words dengan parameter string "num" yang di slice mulai dari index ke 3
+
+  => jika panjang string "num" sama dengan 10, maka:
+
+    # lakukan perulangan dengan variable "i" sama dengan 0 sebanyak jumlah "low_number"
+
+    # jika "num" index ke 0 sama dengan angka "low_number" index ke "i", maka:
+
+      * return function in_words dengan parameter "num" index ke 0 dan
+
+        string "milyar" dan function in_words dengan parameter string "num" yang di slice mulai dari index ke 1
+
+  => jika panjang string "num" sama dengan 11, maka:
+
+    # lakukan perulangan dengan variable "i" sama dengan 0 sebanyak jumlah "low_number"
+
+    # jika "num" index ke 0 sama dengan angka "low_number" index ke "i", maka:
+
+      * return function in_words dengan parameter "num" yang di slice mulai dari index ke 0 sebanyak 2 digit dan
+
+        string "milyar" dan function in_words dengan parameter string "num" yang di slice mulai dari index ke 2
+
+  => jika panjang string "num" sama dengan 12, maka:
+
+    # lakukan perulangan dengan variable "i" sama dengan 0 sebanyak jumlah "low_number"
+
+    # jika "num" index ke 0 sama dengan angka "low_number" index ke "i", maka:
+
+      * return function in_words dengan parameter "num" yang di slice mulai dari index ke 0 sebanyak 3 digit dan
+
+        string "milyar" dan function in_words dengan parameter string "num" yang di slice mulai dari index ke 3
+
+  => jika panjang string "num" sama dengan 13, maka:
+
+    # lakukan perulangan dengan variable "i" sama dengan 0 sebanyak jumlah "low_number"
+
+    # jika "num" index ke 0 sama dengan angka "low_number" index ke "i", maka:
+
+      * return function in_words dengan parameter "num" index ke 0 dan
+
+        string "trilyun" dan function in_words dengan parameter string "num" yang di slice mulai dari index ke 1
+
+  => jika panjang string "num" sama dengan 14, maka:
+
+    # lakukan perulangan dengan variable "i" sama dengan 0 sebanyak jumlah "low_number"
+
+    # jika "num" index ke 0 sama dengan angka "low_number" index ke "i", maka:
+
+      * return function in_words dengan parameter "num" yang di slice mulai dari index ke 0 sebanyak 2 digit dan
+
+        string "trilyun" dan function in_words dengan parameter string "num" yang di slice mulai dari index ke 2
+
+  => jika panjang string "num" sama dengan 12, maka:
+
+    # lakukan perulangan dengan variable "i" sama dengan 0 sebanyak jumlah "low_number"
+
+    # jika "num" index ke 0 sama dengan angka "low_number" index ke "i", maka:
+
+      * return function in_words dengan parameter "num" yang di slice mulai dari index ke 0 sebanyak 3 digit dan
+
+        string "trilyun" dan function in_words dengan parameter string "num" yang di slice mulai dari index ke 3
