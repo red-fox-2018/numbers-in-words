@@ -14,7 +14,7 @@ function in_words(number) {
     arr.unshift(number.slice(-3));
     number = number.substr(0, number.length - 3);
   }
-  console.log(arr);
+  // console.log(arr);
   if (arr.length === 1 && arr[0] == 0) {
     return '';
   } else if (arr.length === 2) {
@@ -60,7 +60,7 @@ function in_words(number) {
           } else if (satuan[j][0].length === 0) {
             return str[i][1] + ' ' + in_words(newInt);
           } else {
-            console.log('perratusan ' + newInt);
+            // console.log('perratusan ' + newInt);
             return str[i][1] + ' ' + satuan[j][0] + ' ' + in_words(newInt);
           }
           // number = number % (str[i][0] * satuan[j][1]);
@@ -77,4 +77,4 @@ function in_words(number) {
 // console.log(in_words(38079));
 // console.log(in_words(82102713))
 console.log(in_words(11112113114));
-// console.log(in_words(1234567890123));
+console.log(in_words(1234567890123));
