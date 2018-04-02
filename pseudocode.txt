@@ -1,0 +1,43 @@
+Function ratusan(parameter: inputNum)
+  STORE number TO [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ,19];
+  STORE word TO['satu', 'dua', 'tiga', 'empat', 'lima', 'enam', 'tujuh', 'delapan', 'sembilan', 'sepuluh', 'sebelas', 'dua belas', 'tiga belas', 'empat belas', 'lima belas', 'enam belas', 'tujuh belas', 'delapan belas' ,'sembilan belas'];
+
+  1. Store inputNum to any value
+  2. Store result to empty string
+  3. If inputNum less than 1, return result
+  4. If inputNum equal number return word
+  5. Change data type of inputNum to string
+  6. If inputNum length is 3
+    6.a.slice the first Number
+    6.b. Change the first Number to word and add 'ratus', then insert into result
+    6.c. return result plus call function ratusan(inputNum modulus 100)
+  7. if inputNum length is 2
+    7.a.slice the first Number
+    7.b. Change the first Number to word and add 'puluh', then insert into result
+    7.c. return result plus call function ratusan(inputNum modulus 10)
+END Function
+
+Function numberToWords(parameter: num)
+  1. Store result to empty string
+  2. if num less than equal 0, return result
+  3. if num length is 3
+    3.a return call ratusan(num)
+  4. if num length more than 3 and less than equal 6
+    4.a. store threeNumFirst with three first number from num
+    4.b. insert result with call ratusan(threeNumFirst) plus ribu
+    4.c. return result plus call numberToWords(num modulus 1000)
+  5. if num length more than 6 and less than equal 9
+    5.a. store threeNumFirst with three first number from num
+    5.b. insert result with call ratusan(threeNumFirst) plus juta
+    5.c. return result plus call numberToWords(num modulus 1000000)
+  6. if num length more than 9 and less than equal 12
+    6.a. store threeNumFirst with three first number from num
+    6.b. insert result with call ratusan(threeNumFirst) plus milyar
+    6.c. return result plus call numberToWords(num modulus 1000000000)
+  7. if num length more than 12 and less than equal 15
+    7.a. store threeNumFirst with three first number from num
+    7.b. insert result with call ratusan(threeNumFirst) plus triliyun
+    7.c. return result plus call numberToWords(num modulus 1000000000000)
+
+
+END Function
