@@ -1,6 +1,10 @@
 function toWords(num) {
   let specialNum = [
     {
+      number: 0,
+      words: ''
+    },
+    {
       number: 1,
       words: 'satu'
     }, {
@@ -61,11 +65,11 @@ function toWords(num) {
   ]
 
   var numStr = num.toString()
-  var str = ''
+  var angkaDepan;
   var sisa;
 
-  if(numStr.length === 0) {
-    return str;
+  if(numStr.length == 0) {
+    return '';
   }
 
   for(var i = 0; i < specialNum.length; i++) {
@@ -74,26 +78,48 @@ function toWords(num) {
       return specialNum[i].words
     }
 
-    if(numStr.length == 2) {
-      if(parseInt(numStr[0]) === specialNum[i].number) {
-        str += specialNum[i].words + ' puluh '
-        sisa = num % 10
-        return str + toWords(sisa)
-      }
+    if(numStr.length == 2 && numStr[0] != 1) {
+      angkaDepan = Math.floor(num / 10)
+      sisa = num % 10
+      return toWords(angkaDepan) + ' puluh ' + toWords(sisa)
     }
 
     if(numStr.length == 3) {
-      if(parseInt(numStr[0]) === 1) {
-        str += 'seratus '
-        sisa = num % 100
-        return str + toWords(sisa)
-      } else if(parseInt(numStr[0]) === specialNum[i].number){
-        str += specialNum[i].words + ' ratus '
-        sisa = num % 100
-        return str + toWords(sisa)
+      angkaDepan = Math.floor(num / 100)
+      sisa = num % 100
+      if(angkaDepan == 1) {
+        return 'seratus ' + toWords(sisa)
       }
+      return toWords(angkaDepan) + ' ratus ' + toWords(sisa)
+    }
+
+    if(numStr.length >= 4  && numStr.length <= 6) {
+      angkaDepan = Math.floor(num / 1000)
+      sisa = num % 1000
+      if(angkaDepan == 1) {
+        return 'seribu ' + toWords(sisa)
+      }
+      return toWords(angkaDepan) + ' ribu ' + toWords(sisa)
+    }
+
+    if(numStr.length >= 7 && numStr.length <= 9) {
+      angkaDepan = Math.floor(num / 1000000)
+      sisa = num % 1000000
+      return toWords(angkaDepan) + ' juta ' + toWords(sisa)
+    }
+
+    if(numStr.length >= 10 && numStr.length <= 12) {
+      angkaDepan = Math.floor(num / 1000000000)
+      sisa = num % 1000000000
+      return toWords(angkaDepan) + ' milyar ' + toWords(sisa)
+    }
+
+    if(numStr.length >= 13 && numStr.length <= 15) {
+      angkaDepan = Math.floor(num / 1000000000000)
+      sisa = num % 1000000000000
+      return toWords(angkaDepan) + ' triliun ' + toWords(sisa)
     }
   }
 }
 
-console.log(toWords(999));
+console.log(toWords(1230000000543));
