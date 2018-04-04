@@ -1,6 +1,11 @@
 function in_words(number) {
   var word = ['','satu', 'dua','tiga','empat','lima','enam','tujuh','delapan','sembilan']
-
+  if(number < 0){
+    return 'invalid input number'
+  }
+  if(number === 0){
+    return 'nol'
+  }
   if (number < 10 ) {
     return word[number]
   }
@@ -73,10 +78,13 @@ function in_words(number) {
     return 'out of range'
   }
 }
+console.log(in_words(-90))
+console.log(in_words(0));
 console.log(in_words(111010));
 console.log(in_words(4));
 console.log(in_words(27));
 console.log(in_words(102002));
 console.log(in_words(38079));
 console.log(in_words(82102713));
-console.log(in_words(999000000000000));
+console.log(in_words(999999999999999));
+console.log(in_words(99999999999999999));
